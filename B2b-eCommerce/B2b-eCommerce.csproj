@@ -807,7 +807,6 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BuyerController.cs" />
     <Compile Include="Controllers\CategorysProductController.cs" />
-    <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductCategoriesController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
