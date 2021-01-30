@@ -1,0 +1,34 @@
+﻿@model B2b_eCommerce.Models.UserModel.RegisterMdl
+@{
+    ViewBag.Title = "GetPremium";
+}
+
+<div class="container">
+    <h2>GetPremium</h2>
+    <hr />
+    <div class="row mt-3">
+        <div class="col-md-12">
+            @ViewData["message"]
+        </div>
+        <div class="col-md-12">
+            <form action="" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="file">Please upload your receipt</label><br />
+                        <input class="mb-2 bordered" type="file" name="file" id="file" />
+                    </div>
+                    <div class="col-md-12">
+                        <label for="mtype">Which memberbership type would you like to upgrade to ?</label>
+                        @Html.DropDownListFor(m => m.RoleName, Model.RoleList, "Select a Role", new { @class = "form-control w-25 mb-2" })
+                    </div>
+                    <div class="col-md-12">
+                        <input class="btn btn-primary" type="submit" value="Upload" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

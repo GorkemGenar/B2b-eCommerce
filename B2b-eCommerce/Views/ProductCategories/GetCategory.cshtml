@@ -1,0 +1,31 @@
+﻿@using B2b_eCommerce.Models.Identity
+@model List<Category>
+
+<form id="btnGetId" action="" method="post">
+    <div class="form-group">
+        <div class="row">
+            <label style="padding-top:10px; margin-left:15px;"><b>Product :</b></label>
+            <select id="CategoryId" style="width:150px; margin-left:5px;" class="form-control">
+                @foreach (var item in Model)
+                {
+                    <option id="opt" value="@item.Id">@item.CategoryName</option>
+                }
+
+            </select>
+            <input value="List" type="submit" class="btn btn-outline-primary ml-2" style="width:70px; font-weight:bold;" onclick="GetId();" />
+
+        </div>
+    </div>
+</form>
+
+<script>
+
+    $(document).ready(function () {
+        $('#btnGetId').click(function () {
+            var id = $('#CategoryId :selected').val();
+            $("#btnGetId").attr('action', '/ProductCategories/ProductCategories/' + id)
+
+        });
+    });
+
+</script>

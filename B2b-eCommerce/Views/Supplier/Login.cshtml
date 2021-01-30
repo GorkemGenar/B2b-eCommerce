@@ -1,0 +1,64 @@
+﻿@model B2b_eCommerce.Models.IdentityViewModels.Login
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container mt-5">
+    
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" style="background:rgba(0,0,0,.03)">
+            <span class="nav-link active" style="color: #000000; background-color:#ffffff; "><b>Login</b></span>
+        </li>
+    </ul>
+
+    <div class="container" style="border-right:solid 1px rgba(0,0,0,.09); border-left:solid 1px rgba(0,0,0,.09); border-bottom:solid 1px rgba(0,0,0,.09);">
+        <div class="tab-content p-2" id="myTabContent">
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 p-2" style="border:solid 1px rgba(0,0,0,.09);">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+                                    {
+                                        <div class="alert alert-danger" role="alert">
+                                            @Html.ValidationSummary()
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        @Html.TextBoxFor(i => i.Username, new { @class = "form-control", placeholder = "Username" })
+                                        @Html.ValidationMessageFor(i => i.Username, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                </div>
+                                @Html.PasswordFor(i => i.Password, new { @class = "form-control", placeholder = "Password" })
+                                @Html.ValidationMessageFor(i => i.Password, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-outline-primary float-right" value="Login" />
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

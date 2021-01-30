@@ -1,0 +1,64 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<B2b_eCommerce.Models.Identity.Buying>
+
+<div class="table-responsive col-xs-12 nopadding hidden-xs mt-2">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Country</th>
+                <th>Category</th>
+                <th>Target Price</th>
+                <th>Payment Terms</th>
+                <th>Quantity Required</th>
+                <th>Shiping Terms</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+           @foreach (var item in Model)
+            {
+                <tr data-href="">
+                    <td>
+                       @item.ProductName
+                    </td>
+                    <td>
+                       @item.User.Country
+                    </td>
+                    <td>
+                       @item.CategoryName
+                    </td>
+                    <td>
+                       @item.TargetPrice
+                    </td>
+                    <td>
+                       @item.PaymentTerms
+                    </td>
+                    <td>
+                       @item.RequiredQuantity
+                    </td>
+                    <td>
+                       @item.ShippingTerms
+                    </td>
+                    <td>
+                       @if (item.Status == "Active")
+                        {
+                            <span class="badge badge-success">@item.Status</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger">@item.Status</span>
+                        }
+                    </td>
+                    <td class="text-center">
+                        <a href="/Buyer/Buyer/@item.Id" type="button" class="btn btn-outline-primary">Quote</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<center>@Html.PagedListPager(Model, _TablesayfaNo => Url.Action("Index", "Home", new { TableSayfaNo = _TablesayfaNo }))</center>

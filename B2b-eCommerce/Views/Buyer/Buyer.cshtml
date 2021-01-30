@@ -1,0 +1,194 @@
+﻿@model B2b_eCommerce.Models.Identity.Buying
+
+
+@{
+    ViewBag.Title = "Buyer";
+}
+
+<!-- Searching Div -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:rgba(0,0,0,.03) !important;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="container">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Buyer</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-1" type="submit">Find Supplier</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Buyer's Request -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card" style="font-size:12px;">
+                <div class="card-header" style="font-size:16px; color: #007bff;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><img src="~/B2b-theme/images/flags/tr.png" style="padding-bottom: 4px; padding-right: 2px;" />Buyer</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 style="float: right;">Published Date</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput"><b>Product Name:</b></label> <label for="formGroupExampleInput">@Model.ProductName</label><br>
+                                    <label for="formGroupExampleInput"><b>Buyer-Company's Name:</b></label> <label for="formGroupExampleInput">@Model.User.CompanyName</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Delivery Condition:</b></label> <label for="formGroupExampleInput">@Model.DeliveryCondition</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Size:</b></label> <label for="formGroupExampleInput"></label><br>
+
+                                    <label for="formGroupExampleInput"><b>Quantity:</b></label> <label for="formGroupExampleInput">@Model.RequiredQuantity</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Specification:</b></label> <label for="formGroupExampleInput"></label><br>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput"><b>Target Price:</b></label> <label for="formGroupExampleInput">@Model.TargetPrice</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Payment Terms:</b></label> <label for="formGroupExampleInput">@Model.PaymentTerms</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Packaging:</b></label> <label for="formGroupExampleInput">@Model.Packaging</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Preservation Method:</b></label> <label for="formGroupExampleInput"></label><br>
+
+                                    <label for="formGroupExampleInput"><b>Authority Person:</b></label> <label for="formGroupExampleInput">@Model.AuthorityPerson</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Description:</b></label> <label for="formGroupExampleInput">@Model.Description</label><br>
+                                </div>
+                            </form>
+                            <button class="btn btn-outline-primary" style="font-size:12px; float: right;" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                Get Contact
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault01">First name :</label>
+                                                        <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="First name" required>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault02">Last name :</label>
+                                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Last name" required>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault02">Phone :</label>
+                                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Phone Number" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault03">Company Name :</label>
+                                                        <input type="text" class="form-control" id="validationDefault03" placeholder="Company Name" required>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault03">Email :</label>
+                                                        <input type="text" class="form-control" id="validationDefault03" placeholder="Company Name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault03">Message :</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3 mt-5">
+                                                        <div class="form-group">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                                                <label class="form-check-label" for="invalidCheck2">
+                                                                    Agree to terms and conditions
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-outline-primary btn-circle btn-sm" type="submit">Send</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card" style="font-size:12px;">
+                <div class="card-header" style="font-size:16px; color: #007bff;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Company Name</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 style="float: right;"><img src="~/B2b-theme/images/flags/tr.png" style="padding-bottom: 4px; padding-right: 2px;" />Country</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput"><b>Company Name:</b></label> <label for="formGroupExampleInput">@Model.User.CompanyName</label><br>
+
+                            <label for="formGroupExampleInput"><b>Sector:</b></label> <label for="formGroupExampleInput">@Model.User.Sector</label><br>
+
+                            <label for="formGroupExampleInput"><b>Year of Establishment:</b></label> <label for="formGroupExampleInput">@Model.User.YearofEstablishment</label><br>
+
+                            <label for="formGroupExampleInput"><b>Company Type:</b></label> <label for="formGroupExampleInput">@Model.User.CompanyType</label><br>
+
+                            <label for="formGroupExampleInput"><b>Website:</b></label> <label for="formGroupExampleInput">@Model.User.Website</label><br>
+
+                            <label for="formGroupExampleInput"><b>Country:</b></label> <label for="formGroupExampleInput">@Model.User.Country</label><br>
+
+                            <label for="formGroupExampleInput"><b>Address:</b></label> <label for="formGroupExampleInput">@Model.User.Address</label><br>
+
+                            <label for="formGroupExampleInput"><b>Email:</b></label> <label for="formGroupExampleInput">@Model.User.Email</label><br>
+
+                            <label for="formGroupExampleInput"><b>Phone:</b></label> <label for="formGroupExampleInput">@Model.User.Phone</label><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Other Buyer's Requests -->
+<div class="container">
+    <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+            <span class="nav-link active" style="color: #007bff; background-color:rgba(0,0,0,.03); font-size:16px">Buying requests related your interest</span>
+        </li>
+    </ul>
+    <div class="table-responsive col-xs-12 nopadding hidden-xs mt-2">
+        @Html.Action("BuyerRequestTable", "Buyer")
+    </div>
+</div>
+

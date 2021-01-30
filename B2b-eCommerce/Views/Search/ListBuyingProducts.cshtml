@@ -1,0 +1,13 @@
+﻿@model IEnumerable<B2b_eCommerce.Models.SearchResultViewMdl>
+
+@foreach (var item in Model)
+{
+    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">@item.BuyingProductName</h5>
+            <small>3 days ago</small>
+        </div>
+        <p class="mb-1">@item.BuyingGeneralProductInformation</p>
+        <small>Donec id elit non mi porta.</small>
+    </a>
+}

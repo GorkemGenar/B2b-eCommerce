@@ -1,0 +1,62 @@
+﻿@model List<B2b_eCommerce.Models.ProductCategories>
+
+@{ int counter = 0; }
+<div id="multi-item-example" class="carousel slide carousel-multi-item mt-2" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner p-0" role="listbox">
+        <div class="carousel-item active">
+            <div class="row">
+                @for (int j = 0; j < Model.Count(); j++)
+                {
+                    <div class="col-md-6 mt-2">
+                        <div class="card" border-radius: 10px;">
+                            <div class="row" style="position:relative !important;">
+                                <div class="col-md-4" style="border-right: solid 1px rgba(0,0,0,.125);">
+                                    <img src="~/B2b-theme/images/example.jpg" style="width: 100%; height:100%; border-radius:10px 0px 0px 10px; padding:5px;" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row mt-1">
+                                        <div class="col-md-6">
+                                            <b>Company Name: </b> <span style="margin-left:2px;">@Model[counter].SupplierName</span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Product: </b> <span style="margin-left:2px;">@Model[counter].ProductName</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <p>
+                                                @Model[counter].Description
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1">
+                                        <div class="col-md-6">
+                                            <b>Country: </b> <span style="margin-left:2px;">@Model[counter].Country </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="/Product/Product/@Model[counter].SupplyId" class="btn btn-outline-primary btn-circle btn-sm mr-2 mb-2" style="float: right;">Contact Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    counter = counter + 1;
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@if (Model.Count()>8)
+{
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="controls-top mr-10">
+                <center>
+                    <a class="btn btn-outline-primary btn-circle btn-sm" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                    <a class="btn btn-outline-primary btn-circle btn-sm" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </center>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,57 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model List<B2b_eCommerce.Models.Identity.Supply>
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item mt-2" data-ride="carousel">
+    <div class="carousel-inner p-0 " role="listbox">
+        <div class="carousel-item active">
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <div class="col-md-3 p-0" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top p-1" src="~/B2b-theme/images/example.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">@Model[i].ProductName</h4>
+                            <p class="card-text">
+                                @Model[i].GeneralProductInformation
+                            </p>
+                            <a href="/Product/Product/@Model[i].Id" class="btn btn-outline-primary btn-circle btn-sm" style="float: right;">Primary</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        @*<div class="carousel-item">
+            @for (int j = 4; j < 8; j++)
+            {
+                <div class="col-md-3 p-0" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="~/B2b-theme/images/example.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">@Model[j].ProductName</h4>
+                            <p class="card-text">@Model[j].GeneralProductInformation</p>
+                            <a href="/Product/Product/@Model[j].Id" class="btn btn-outline-primary btn-circle btn-sm" style="float: right;">Primary</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>*@
+    </div>
+    @if (Model.Count() > 4)
+    {
+        <div class="row">
+            <div class="col-md-5" style="float:right;">
+            </div>
+            <div class="col-md-6 ml-5">
+                <div class="controls-top mb-2">
+                    <a class="btn btn-outline-primary btn-circle btn-sm" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                    <a class="btn btn-outline-primary btn-circle btn-sm" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    }
+</div>
+@*<center>@Html.PagedListPager(Model, _SuppProsayfaNo => Url.Action("Index", "Home", new { SuppProSayfaNo = _SuppProsayfaNo }))</center>*@
+
+

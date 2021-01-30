@@ -1,0 +1,93 @@
+﻿body {
+    font-size: 12px;
+}
+
+.m_slider {
+    margin: 10px;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.form-inline .form-control {
+    width: 500px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-left: 1px solid rgba(0,0,0,.125);
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.mk-site-mid {
+    margin: 50px;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid red;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-img-top-1 {
+    width: 50px !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #660000 !important;
+}
+
+.btn {
+    font-size: 12px !important;
+}
+
+.input-group.md-form.form-sm.form-1 input {
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid #ef9a9a;
+}
+
+.input-group.md-form.form-sm.form-2 input.lime-border {
+    border: 1px solid #cddc39;
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
+    border: 1px solid #ffca28;
+}

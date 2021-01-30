@@ -1,0 +1,141 @@
+﻿@model IEnumerable<B2b_1.Models.Entity.tbl_Supply>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryCondition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTerms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinimumOrderQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShelfLife)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Packaging)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreservationMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthorityPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplyCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductOrigin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeneralProductInformation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_Suppliers.SupplierName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryCondition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentTerms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinimumOrderQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShelfLife)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Packaging)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreservationMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorityPerson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplyCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductOrigin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeneralProductInformation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_Suppliers.SupplierName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

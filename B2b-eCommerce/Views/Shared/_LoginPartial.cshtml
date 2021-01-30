@@ -1,0 +1,19 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <li class="nav-item">
+        <a href="/Account/CurrentProfile/@User.Identity.Name" class="text-dark btn btn-outline-info border-0"><i class="fa fa-user"></i>@User.Identity.Name</a>
+    </li>
+    <li class="nav-item">
+        <a href="/Account/Logout" class="btn btn-outline-danger text-dark border-0"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link btn btn-primary text-white" type="button" href="/Account/Login">Sign In</a>
+    </li>
+    <li class="nav-item ml-1">
+        <a class="nav-link btn btn-danger text-white" type="button" href="/Account/Register">Register</a>
+    </li>
+    
+}

@@ -1,0 +1,82 @@
+﻿@model B2b_1.Models.Entity.tbl_Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneralProductInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeneralProductInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_Buyers.BuyerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_Buyers.BuyerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_Buying.DeliveryCondition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_Buying.DeliveryCondition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_Categories.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_Categories.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_Suppliers.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_Suppliers.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_Supply.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_Supply.Quantity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,36 @@
+﻿@using B2b_eCommerce.Models
+@model List<ReceiptViewMdl>
+
+<div class="container">
+    @if (Model.Count() == 0)
+    {
+        <tr><td colspan="5" align="center"><b>Any User does not exist for approving</b></td></tr>
+    }
+    else
+    {
+        <tbody>
+            @{
+                var counter = 1;
+                foreach (ReceiptViewMdl file in Model)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    var userName = fileName.Split(' ');
+                    <tr style="text-align:center;">
+                        <th scope="row">@counter</th>
+                        <td>@userName[0]</td>
+                        <td style="text-align:center;">@userName[4]</td>
+                        <td>
+                            <a href="~/Receipts/UploadedReceipts/@fileName" name="">@userName[0]@userName[1]@userName[2]</a>
+                        </td>
+                        <td>
+                            @Html.ActionLink("Approve", "Approving", new { fileName = file.FileName }, new { @class = "btn btn-sm btn-success" }) |
+                            @Html.ActionLink("Delete", "Delete", new { fileName = file.FileName }, new { onclick = "return confirm('Are sure wants to delete?');", @class = "btn btn-sm btn-danger" })
+                        </td>
+                    </tr>
+                    counter += 1;
+                }
+            }
+        </tbody>
+    }
+</div>
+

@@ -1,0 +1,22 @@
+﻿@using B2b_eCommerce.Models
+@model List<ReceiptViewMdl>
+
+<div class="container">
+    @{
+        var counter = 1;
+        foreach (ReceiptViewMdl file in Model)
+        {
+            var fileName = Path.GetFileName(file.FileName);
+            var userName = fileName.Split(' ');
+            <tr style="text-align:center;">
+                <th scope="row">@counter</th>
+                <td>@userName[0]</td>
+                <td style="text-align:center;">@userName[4]</td>
+                <td><a href="~/Receipts/ApprovedReceipts/@fileName" name="">@userName[0]@userName[1]@userName[2]</a></td>
+            </tr>
+            counter += 1;
+        }
+    }
+</div>
+
+

@@ -1,0 +1,24 @@
+﻿@using B2b_eCommerce.Models
+@model ReceiptViewMdl
+
+@{
+    ViewBag.Title = "Approving";
+}
+
+@{
+    var fileName = Path.GetFileName(Model.FileName);
+    var userName = fileName.Split(' ');
+}
+<div class="container">
+    <h3>Are you sure to make @userName[0] member a Gold member ?</h3>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <p><b>UserName: </b>@userName[0]</p>
+        <p><b>Request for type of Membership: </b>@userName[4]</p>
+        <p><b>Receipt: </b><a href="~/Receipts/UploadedReceipts/@fileName">@fileName</a></p>
+        <button type="submit" class="btn btn-success">Approve</button>
+        <a href="/Admin" class="btn btn-danger">Cancel</a>
+    }
+</div>

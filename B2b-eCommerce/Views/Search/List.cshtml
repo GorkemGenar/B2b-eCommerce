@@ -1,0 +1,80 @@
+﻿@model IEnumerable<B2b_eCommerce.Models.SearchResultViewMdl>
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="container mt-5">
+            <div class="list-group">
+                @foreach (var item in Model)
+                {
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@item.BuyingProductName</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">@item.BuyingGeneralProductInformation</p>
+                        <small>Donec id elit non mi porta.</small>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container mt-5">
+            <div class="list-group">
+                @foreach (var item in Model)
+                {
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@item.SupplyProductName</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">@item.SupplyGeneralProductInformation</p>
+                        <small>Donec id elit non mi porta.</small>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="container mt-5">
+            <div class="list-group">
+                @foreach (var item in Model)
+                {
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@item.BuyerCompanyName</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">@item.BuyerCountry</p>
+                        <small>Donec id elit non mi porta.</small>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container mt-5">
+            <div class="list-group">
+                @foreach (var item in Model)
+                {
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@item.SupplierName</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">@item.SupplierCountry</p>
+                        <small>Donec id elit non mi porta.</small>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
