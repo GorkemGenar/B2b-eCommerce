@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>B2B - Supplier, Buyer</title>
+        
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="css-local/style.css">
+        <link rel="stylesheet" href="css-local/table.css">
+
+        <!-- Include Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">     
+
+    </head>
+    <body>
+        
+        <!-- Navbar Div -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand" href="/mainpage.html">B2B</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto topnav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suppliers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trade Information of Countries</a>
+                    </li>
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sit Amet
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Lorem Ipsum</a>
+                            <a class="dropdown-item" href="#">Lorem Ipsum</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Lorem Ipsum</a>
+                        </div>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>                  
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a class="nav-link btn btn-danger text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h3 class="modal-title">Sign In</h3>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6" style="border-right: solid 1px ;">                                        
+                                        <h5><img src="images/supplier_icon.png" style="width: 50px; height: 50px; margin-bottom: 5px; margin-right: 3px;">Supplier</h5>
+                                        <label class="sr-only" for="usrname">Username</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <label class="sr-only" for="Password">Name</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                            </div>
+                                            <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="float: right;" >Sign In</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5><img src="images/buyer_icon.png" style="width: 50px; height: 50px; margin-bottom: 5px; margin-right: 3px;">Buyer</h5>
+                                        <label class="sr-only" for="usrname">Username</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <label class="sr-only" for="Password">Name</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                            </div>
+                                            <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="float: right;" >Sign In</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Searching Div -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:rgba(0,0,0,.03) !important;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <div class="container">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Buyer</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0 ml-1" type="submit">Find Supplier</button>
+                    </form>
+                </div>                                                                          
+            </div>
+        </nav>
+        
+        <!-- Buyer's Request -->
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="card" style="font-size:12px;" >
+                        <div class="card-header" style="font-size:16px; color: #007bff;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5><img src="/images/flags/tr.png" style="padding-bottom: 4px; padding-right: 2px;"/>Buyer</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="float: right;">Published Date</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput"><b>Product Name:</b></label> <label for="formGroupExampleInput">Product Name</label><br>
+                                            <label for="formGroupExampleInput"><b>Buyer-Company's Name:</b></label> <label for="formGroupExampleInput">Buyer-Company's Name</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Delivery Condition:</b></label> <label for="formGroupExampleInput">Delivery Condition</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Size:</b></label> <label for="formGroupExampleInput">Size</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Quantity:</b></label> <label for="formGroupExampleInput">Quantity</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Specification:</b></label> <label for="formGroupExampleInput">Specification</label><br>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput"><b>Target Price:</b></label> <label for="formGroupExampleInput">Target Price</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Payment Terms:</b></label> <label for="formGroupExampleInput">Payment Terms</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Packaging:</b></label> <label for="formGroupExampleInput">Packaging</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Preservation Method:</b></label> <label for="formGroupExampleInput">Preservation Method</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Authority Person:</b></label> <label for="formGroupExampleInput">Authority Person</label><br>
+                                            
+                                            <label for="formGroupExampleInput"><b>Description:</b></label> <label for="formGroupExampleInput">Description</label><br>
+                                        </div>
+                                    </form>
+                                    <a href="#" class="btn btn-outline-primary" style="font-size:12px; float: right;">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        Get Contact
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card" style="font-size:12px;" >
+                        <div class="card-header" style="font-size:16px; color: #007bff;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Company Name</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="float: right;"><img src="/images/flags/tr.png" style="padding-bottom: 4px; padding-right: 2px;"/>Country</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput"><b>Company Name:</b></label> <label for="formGroupExampleInput">Company Name</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Sector:</b></label> <label for="formGroupExampleInput">Sector</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Year of Establishment:</b></label> <label for="formGroupExampleInput">Year of Establishment</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Company Type:</b></label> <label for="formGroupExampleInput">Company Type</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Website:</b></label> <label for="formGroupExampleInput">Website</label><br>
+
+                                    <label for="formGroupExampleInput"><b>Country:</b></label> <label for="formGroupExampleInput">Country</label><br>
+                                    
+                                    <label for="formGroupExampleInput"><b>Address:</b></label> <label for="formGroupExampleInput">Address</label><br>
+                                    
+                                    <label for="formGroupExampleInput"><b>Email:</b></label> <label for="formGroupExampleInput">Email</label><br>
+                                    
+                                    <label for="formGroupExampleInput"><b>Phone:</b></label> <label for="formGroupExampleInput">Phone</label><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other Buyer's Requests -->
+        <div class="container">
+            <ul class="nav nav-tabs mt-3">
+                <li class="nav-item">
+                    <span class="nav-link active" style="color: #007bff; background-color:rgba(0,0,0,.03); font-size16">Buying requests related your interest</span>
+                </li>
+            </ul>
+            <div class="table-responsive col-xs-12 nopadding hidden-xs">
+                <table id="table-buyingrequest"class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Target Price</th>
+                            <th>Payment Terms</th>
+                            <th>Quantity Required</th>
+                            <th>Shiping Terms</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-href="">
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td class="text-center">
+                                <a href="/buyer.html">
+                                    <button type="button" class="btn btn-outline-primary">Quote</button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="">
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td class="text-center">
+                                <a href="/buyer.html">
+                                    <button type="button" class="btn btn-outline-primary">Quote</button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr data-href="">
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td>
+                                ...
+                            </td>
+                            <td class="text-center">
+                                <a href="/buyer.html">
+                                    <button type="button" class="btn btn-outline-primary">Quote</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/">B2B.com</a>
+            </div>
+        </footer>
+        
+    </body>
+    <!-- Main Bootstrap Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+        <!-- External jQuery -->
+        <script type="text/javascript" src="Javascript/f.js"></script>
+        <script type="text/javascript" src="Javascript/tableManager.js"></script>
+        <script type="text/javascript">
+                // basic usage
+                $('.tablemanager').tablemanager({
+                    firstSort: [[3,0],[2,0],[1,'asc']],
+                    disable: ["last"],
+                    appendFilterby: true,
+                    dateFormat: [[4,"mm-dd-yyyy"]],
+                    debug: true,
+                    vocabulary: {
+            voc_filter_by: 'Filter By',
+            voc_type_here_filter: 'Filter...',
+            voc_show_rows: 'Rows Per Page'
+          },
+                    pagination: true,
+                    showrows: [5,10,20,50,100],
+                    disableFilterBy: [1]
+                });
+                // $('.tablemanager').tablemanager();
+        </script>
+        <script type="text/javascript">
+            try {
+              fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+                return true;
+              }).catch(function(e) {
+                var carbonScript = document.createElement("script");
+                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+                carbonScript.id = "_carbonads_js";
+                document.getElementById("carbon-block").appendChild(carbonScript);
+              });
+            } catch (error) {
+              console.log(error);
+            }
+        </script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36251023-1']);
+          _gaq.push(['_setDomainName', 'jqueryscript.net']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+</html>

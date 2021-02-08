@@ -98,7 +98,6 @@ C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\bin\tr\System.Web.Raz
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\bin\tr\System.Web.WebPages.resources.dll
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\bin\tr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\bin\tr\System.Web.WebPages.Razor.resources.dll
-C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\obj\Debug\B2b-eCommerce.csprojAssemblyReference.cache
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\obj\Debug\B2b-eCommerce.csproj.CoreCompileInputs.cache
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\obj\Debug\B2b-eCommerce.csproj.CopyComplete
 C:\Users\computer\source\repos\B2b-eCommerce\B2b-eCommerce\obj\Debug\B2b-eCommerce.dll
